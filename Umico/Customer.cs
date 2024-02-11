@@ -8,10 +8,13 @@ namespace Umico
 {
     public class Customer
     {
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public int Age { get; set; }
-        public virtual List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Order> Orders { get; set; } = new List<Order>();
     }
 }

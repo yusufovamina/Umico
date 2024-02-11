@@ -11,11 +11,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#FF25416F">
-            <Image Source="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
-            <Label Content="Umico" Margin="51,3,657,5" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
-            <Button  Margin="750,2,10,4" >
+            <Image Source="..\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
+            <Label Content="Umico" VerticalAlignment="Top" Margin="50,3,0,0" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
+            <Button HorizontalAlignment="Right"  Height="35" Width="35" >
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\icons8-user-48.png"/>
+                    <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\icons8-user-48.png"/>
                 </Button.Background>
                 <Button.Foreground>
                     <ImageBrush Stretch="Uniform" TileMode="None"/>
@@ -24,8 +24,15 @@
 
         </Grid>
         <Grid Grid.Row="1">
-            <Image Source="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\UmicoLogoMain.jpg" Margin="300,65,334,166"/>
-            <Label Content="Welcome!" Margin="326,10,348,329" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="Black" RenderTransformOrigin="0.5,0.5">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7D62E3"/>
+                    <GradientStop Color="#FF1F1F1F" Offset="1"/>
+                    <GradientStop Color="#FF7D62E3" Offset="0.632"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Source="..\Umico\UmicoLogoMain.jpg" Margin="300,65,334,166"/>
+            <Label Content="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" RenderTransformOrigin="0.5,0.5">
                 
             </Label>
             <Button Content="Continue as Admin" HorizontalAlignment="Left" Height="39" Margin="206,256,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White"/>
