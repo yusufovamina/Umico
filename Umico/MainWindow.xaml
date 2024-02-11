@@ -14,6 +14,7 @@
             <Image Source="..\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
             <Label Content="Umico" VerticalAlignment="Top" Margin="50,3,0,0" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
             <Button HorizontalAlignment="Right"  Height="35" Width="35" >
+               
                 <Button.Background>
                     <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\icons8-user-48.png"/>
                 </Button.Background>
@@ -24,20 +25,33 @@
 
         </Grid>
         <Grid Grid.Row="1">
+          
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF7D62E3"/>
-                    <GradientStop Color="#FF1F1F1F" Offset="1"/>
+                    <GradientStop Color="#FFEAE5FF" Offset="1"/>
                     <GradientStop Color="#FF7D62E3" Offset="0.632"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Image Source="..\Umico\UmicoLogoMain.jpg" Margin="300,65,334,166"/>
             <Label Content="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" RenderTransformOrigin="0.5,0.5">
-                
-            </Label>
-            <Button Content="Continue as Admin" HorizontalAlignment="Left" Height="39" Margin="206,256,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White"/>
-            <Button Content="Continue as User" HorizontalAlignment="Left" Height="39" Margin="423,256,0,0" VerticalAlignment="Top" Width="121" Background="#FF25416F" FontWeight="Bold" Foreground="White" FontSize="14"/>
 
+            </Label>
+            <Button Content="Continue as Admin" HorizontalAlignment="Left" Height="39" Margin="206,256,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="AdminEnter_CLick">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Continue as User" HorizontalAlignment="Left" Height="39" Margin="423,256,0,0" VerticalAlignment="Top" Width="121" Background="#FF25416F" FontWeight="Bold" Foreground="White" FontSize="14">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            </Button>
+            <Frame Name="MainFrame" Navigated="MainFrame_Navigated"></Frame>
         </Grid>
     </Grid>
 </Window>
