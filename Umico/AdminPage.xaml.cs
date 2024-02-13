@@ -62,5 +62,7 @@ namespace Umico
             using (var db = new AppContext()) {
                 var c1 = db.Orders.Where(o => o.Name == OrdersNames.SelectedValue.ToString()).ToList();
                 CustomerName.Text = c1[0].Customer.Name;
-    } } }
+            }
+        } 
+    }
 }

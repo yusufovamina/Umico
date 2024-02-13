@@ -13,7 +13,7 @@
         <Grid Grid.Row="0" Background="#FF25416F">
             <Image Source="..\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
             <Label Content="Umico" VerticalAlignment="Top" Margin="50,3,0,0" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
-            <Button HorizontalAlignment="Right"  Height="35" Width="35" >
+            <Button HorizontalAlignment="Right"  Height="35" Width="35" Click="ProfileButton_CLick">
                
                 <Button.Background>
                     <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\icons8-user-48.png"/>
@@ -44,7 +44,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Continue as User" HorizontalAlignment="Left" Height="39" Margin="423,256,0,0" VerticalAlignment="Top" Width="121" Background="#FF25416F" FontWeight="Bold" Foreground="White" FontSize="14">
+            <Button Content="Continue as User" Click="UserEnter_CLick" HorizontalAlignment="Left" Height="39" Margin="423,256,0,0" VerticalAlignment="Top" Width="121" Background="#FF25416F" FontWeight="Bold" Foreground="White" FontSize="14">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

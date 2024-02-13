@@ -1,0 +1,49 @@
+﻿<Page x:Class="Umico.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Umico"
+      mc:Ignorable="d" 
+      d:DesignHeight="410" d:DesignWidth="800"
+      Title="ProfilePage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7D62E3" Offset="1"/>
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#FFCFC5F4" Offset="0.517"/>
+                <GradientStop Color="White" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Ellipse Name="UserAvatar" Height="100" Width="100" Margin="648,24,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\profile-user.png"  />
+
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <TextBlock Background="AliceBlue" VerticalAlignment='Top' Margin="616,146,28,0" x:Name ="namelbl"
+            Text="{Binding Text, ElementName=Name, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="34"/>
+        <TextBlock Background="AliceBlue" VerticalAlignment='Top' Margin="616,205,28,0" x:Name ="surnamelbl"
+             Text="{Binding Text, ElementName=Surname, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="30"/>
+        <TextBlock  Background="AliceBlue" VerticalAlignment='Top' Margin="616,269,28,0" x:Name ="agelbl"
+             Text="{Binding Value, ElementName=Age, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="25"/>
+
+        <Button  Click="Back_CLick" HorizontalAlignment="Left" Height="35"  Margin="14,12,0,0" VerticalAlignment="Top" Width="35" FontWeight="Bold" FontSize="14" BorderBrush="#00000000">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\arrow.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush ImageSource="C:\Users\Admin\source\repos\Umico\Umico\arrow.png"/>
+            </Button.Foreground>
+        </Button>
+
+    </Grid>
+</Page>
