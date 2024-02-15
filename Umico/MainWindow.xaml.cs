@@ -81,10 +81,10 @@ namespace Umico
                 PickUpPoint pickup4 = new PickUpPoint() { Name = "PickUp 4", Location = "Fizuli street 26" };
 
                 Order o1=new Order() { Name="Y45C3X09A2", Customer=customer1, PickUpPoint=pickup1, Products=new List<Product>() { p1,p2,p3}, Status=status1 };
-                db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
-                db.Statuses.AddRange(status1,status2,status3,status4,status5);
+               // db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
+                //db.Statuses.AddRange(status1,status2,status3,status4,status5);
                 //db.Products.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13);
-                 db.Customers.AddRange(customer1, customer2, customer3, customer4,customer5,customer6,customer7);
+                 //db.Customers.AddRange(customer1, customer2, customer3, customer4,customer5,customer6,customer7);
                 // db.Orders.Add(o1);
                 //db.Products.Add(p1);\
                //db.Products.AddRange( p2, p3);

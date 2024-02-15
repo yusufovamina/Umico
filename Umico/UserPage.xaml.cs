@@ -60,18 +60,26 @@ namespace Umico
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             string orderName = GenerateRandomString(10);
-            Order order = new Order();
-            order.Name = orderName;
+            
+            List<Product> Products= new List<Product>();
             foreach (Product i in cartListView.Items) {
-                order.Products.Add(i);
+               Products.Add(i);
             }
-            order.Customer = CurrentUser.CurrentCustomer;
+           
             using (var db = new AppContext()) {
-                order.Status = db.Statuses.First(x=>x.Name== "Order is being processed");
                 Random random = new Random();
-                order.PickUpPoint = db.PickUpPoints.Find(random.Next(1, 6));
+                Order order = new Order() {Name=orderName, Customer=CurrentUser.CurrentCustomer, Products=Products,
+                    Status= db.Statuses.First(x => x.Name == "Order is being processed"),
+                    PickUpPoint = db.PickUpPoints?.Find(random.Next(1, 6))
+            };
+               
+                
+                
+                db.Orders.Add(order);
+                db.SaveChanges();
             }
             MessageBox.Show("Succesfull operation");
+
         }
 
         static string GenerateRandomString(int length)
