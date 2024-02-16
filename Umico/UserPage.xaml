@@ -36,18 +36,12 @@
             </ListView.View>
         </ListView>
 
-        <ListView Name="cartListView" Margin="438,71,45,172" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=Name}" Width="200"/>
-                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Path=Price}" Width="100"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label HorizontalAlignment="Left" Content="Total amount:" Margin="430,270,0,109" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="16"/>
-        <TextBlock x:Name="total" HorizontalAlignment="Left" Text="0" Margin="550,275,0,104" FontSize="16" FontWeight="Bold" FontFamily="Global Sans Serif"/>
+        <Label Name="Product" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="505,15,0,0" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="16" Height="43" Width="151"/>
 
-        <Button Margin="615,321,45,40" Background="#FF7D62E3" Foreground="White" FontWeight="Bold" Content="Order" Click="OrderButton_Click" FontSize="18">
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Total amount:" Margin="430,204,0,175" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="total" HorizontalAlignment="Left" VerticalAlignment="Top" Text="0" Margin="550,209,0,170" FontSize="16" FontWeight="Bold" FontFamily="Global Sans Serif"/>
+
+        <Button Margin="0,320,45,0" Background="#FF7D62E3" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Content="Order" Click="OrderButton_Click" FontSize="18" Width="129" Height="48">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -55,16 +49,16 @@
             </Button.Resources>
         </Button>
 
-        <Button Margin="430,321,230,40" Background="#FFE82861" Foreground="White" FontWeight="Bold" Content="Discard" Click="Discard_Click" FontSize="18">
+        <Button Margin="430,319,0,0" Background="#FFE82861" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontWeight="Bold" Content="Discard" Click="Discard_Click" FontSize="18" Width="124" Height="49">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <StackPanel Visibility="Visible" x:Name="LoginOrSignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
+        <StackPanel Visibility="Hidden" x:Name="LoginOrSignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,30,0,0" Content="           Log in or Sign Up" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
-            <Image Source="C:\Users\Admin\source\repos\Umico\Umico\UmicoLogoMain.jpg" Height="100" Width="100"/>
+            <Image Source="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\UmicoLogoMain.jpg" Height="100" Width="100"/>
             <Button Content="Log in" HorizontalAlignment="Left" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="UserLogin_CLick">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -81,7 +75,7 @@
             </Button>
         </StackPanel>
         <StackPanel Visibility="Hidden" x:Name="Login" HorizontalAlignment="Left" Height="380" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
-            <Label Margin="0,20,0,0" Content="   Log in to continue" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
+            <Label Margin="0,20,0,0" Content="            Log in to continue" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
             <TextBox x:Name="Username" Margin="50,50,50,0" Height="50" FontSize="22"/>
             <PasswordBox x:Name="Password" Margin="50,40,50,0" Height="50" FontSize="22"/>
             <Button Content="Log in" HorizontalAlignment="Left" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="Login_CLick">
@@ -92,6 +86,10 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
+        <ComboBox Name="PickUpBox" HorizontalAlignment="Left" Height="23" Margin="641,233,0,0" VerticalAlignment="Top" Width="107" BorderBrush="White">
+
+        </ComboBox>
+        <Label Content="Choose Pick-Up Point" HorizontalAlignment="Left" Height="24" Margin="626,206,0,0" VerticalAlignment="Top" Width="137" FontWeight="Bold" FontFamily="Global Sans Serif"/>
 
 
     </Grid>

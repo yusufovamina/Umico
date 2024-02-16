@@ -43,6 +43,12 @@ namespace Umico
                 {
                     productListView.Items.Add(product);
                 }
+                var PickUps= db.PickUpPoints.ToList();
+                foreach(var point in PickUps)
+                {
+                    PickUpBox.Items.Add(point.Location);
+                }
+
             }
         }
 
@@ -60,22 +66,23 @@ namespace Umico
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             string orderName = GenerateRandomString(10);
+          
             
-            List<Product> Products= new List<Product>();
-            foreach (Product i in cartListView.Items) {
-               Products.Add(i);
-            }
            
             using (var db = new AppContext()) {
-                Random random = new Random();
-                Order order = new Order() {Name=orderName, Customer=CurrentUser.CurrentCustomer, Products=Products,
-                    Status= db.Statuses.First(x => x.Name == "Order is being processed"),
-                    PickUpPoint = db.PickUpPoints?.Find(random.Next(1, 6))
+                db.Orders.ToList();
+                db.Products.ToList();
+                var product=db.Products.Where
+                (p=>p.Name==Product.Name).FirstOrDefault();
+                List<Product> products = new List<Product>();products.Add(product);
+                Order order1 = new Order() { Name = orderName, Customer = CurrentUser.CurrentCustomer, Products = products,
+                    Status = db.Statuses.First(x => x.Name == "Order is being processed"),
+                    PickUpPoint = db.PickUpPoints?.Where(p => p.Location == PickUpBox.SelectedValue).FirstOrDefault()
             };
                
                 
                 
-                db.Orders.Add(order);
+                db.Orders.Add(order1);
                 db.SaveChanges();
             }
             MessageBox.Show("Succesfull operation");
@@ -99,14 +106,12 @@ namespace Umico
 
         private void AddToCart(Product product)
         {
-            List <Product> products = new List <Product>();
-            products.Add(product);
-            cartListView.Items.Add(product);
+            Product.Content = product.Name;
         }
 
         private void Discard_Click(object sender, RoutedEventArgs e)
-        { 
-        cartListView.Items.Clear();
+        {
+            Product.Content = "";
             total.Text = "0";
         }
         

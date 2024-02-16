@@ -45,27 +45,27 @@ namespace Umico
                 Customer customer6 = new Customer() { Name = "Zaur", Surname = "Tagizade", Age = 24, Username = "zaur01", Password = "24242424" };
                 Customer customer7 = new Customer() { Name = "David", Surname = "Abdullayev", Age = 24, Username = "abd_david", Password = "daviddavid" };
 
-                byte[] imageBytes = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\tomatoes.png");
-                byte[] imageBytes2 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\salmon.png");
-                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\spagetti.png");
-                byte[] imageBytes4 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\ayran.png");
-                byte[] imageBytes5 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\chocolate.png");
-                byte[] imageBytes6 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\sprite.png");
-                byte[] imageBytes7 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\bread.png");
+                //byte[] imageBytes = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\repos\\Umico\\Umico\\tomatoes.png");
+                byte[] imageBytes2 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\salmon.png");
+                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\spagetti.png");
+                //byte[] imageBytes4 = File.ReadAllBytes("..\\Umico\\ayran.png");
+                //byte[] imageBytes5 = File.ReadAllBytes("..\\Umico\\chocolate.png");
+                //byte[] imageBytes6 = File.ReadAllBytes("..\\Umico\\sprite.png");
+                //byte[] imageBytes7 = File.ReadAllBytes("..\\Umico\\bread.png");
 
-                Product p1 = new Product() { Name = "Tomato", Price = 3 , Image=imageBytes};
+               // Product p1 = new Product() { Name = "Tomato", Price = 3 };
                 Product p2 = new Product() { Name = "Salmon", Price = 15, Image=imageBytes2 };
                 Product p3 = new Product() { Name = "Spagetti", Price = 3, Image= imageBytes3 };
-                Product p4 = new Product() { Name = "Ayran", Price = 2,Image= imageBytes4 };
-                Product p5 = new Product() { Name = "Chocolate", Price = 1, Image=imageBytes5 };
-                Product p6 = new Product() { Name = "Sprite", Price = 1, Image = imageBytes6 };
-                Product p7 = new Product() { Name = "Bread", Price = 1, Image= imageBytes7 };
-                Product p8 = new Product() { Name = "Chicken", Price = 6 };
-                Product p9 = new Product() { Name = "Pineapple", Price = 4 };
-                Product p10 = new Product() { Name = "Orange juice", Price = 3 };
-                Product p11 = new Product() { Name = "Snickers cake", Price = 9 };
-                Product p12 = new Product() { Name = "Butter", Price = 12 };
-                Product p13 = new Product() { Name = "Carrot", Price = 5 };
+                //Product p4 = new Product() { Name = "Ayran", Price = 2};
+                //Product p5 = new Product() { Name = "Chocolate", Price = 1};
+                //Product p6 = new Product() { Name = "Sprite", Price = 1 };
+                //Product p7 = new Product() { Name = "Bread", Price = 1 };
+                //Product p8 = new Product() { Name = "Chicken", Price = 6 };
+                //Product p9 = new Product() { Name = "Pineapple", Price = 4 };
+                //Product p10 = new Product() { Name = "Orange juice", Price = 3 };
+                //Product p11 = new Product() { Name = "Snickers cake", Price = 9 };
+                //Product p12 = new Product() { Name = "Butter", Price = 12 };
+                //Product p13 = new Product() { Name = "Carrot", Price = 5 };
 
 
                 Status status1 = new Status() { Name = "Order is being processed" };
@@ -80,14 +80,15 @@ namespace Umico
                 PickUpPoint pickup3 = new PickUpPoint() { Name = "PickUp 3", Location = "Dilara Aliyeva street 78" };
                 PickUpPoint pickup4 = new PickUpPoint() { Name = "PickUp 4", Location = "Fizuli street 26" };
 
-                Order o1=new Order() { Name="Y45C3X09A2", Customer=customer1, PickUpPoint=pickup1, Products=new List<Product>() { p1,p2,p3}, Status=status1 };
-               // db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
+                Order o1=new Order() { Name="Y45C3X09A2", Customer=customer1, PickUpPoint=pickup1, Products=new List<Product>() {p2,p3}, Status=status1 };
+                
+                //db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
                 //db.Statuses.AddRange(status1,status2,status3,status4,status5);
                 //db.Products.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13);
-                 //db.Customers.AddRange(customer1, customer2, customer3, customer4,customer5,customer6,customer7);
-                // db.Orders.Add(o1);
-                //db.Products.Add(p1);\
-               //db.Products.AddRange( p2, p3);
+               // db.Customers.AddRange(customer1, customer2, customer3, customer4,customer5,customer6,customer7);
+                //db.Orders.Add(o1);
+               // db.Products.Add(p1);
+               // db.Products.AddRange( p2, p3);
                 db.SaveChanges();
 
             }
