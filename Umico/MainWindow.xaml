@@ -11,20 +11,22 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#FF25416F">
-            <Image Source="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
+            <Image Source="C:\Users\Admin\source\repos\Umico\Umico\umico-logo.png" Margin="5,8,752,7"></Image>
             <Label Content="Umico" VerticalAlignment="Top" Margin="50,3,0,0" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
-            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="35" Click="ProfileButton_CLick" BorderBrush="#00000000" Margin="750,2,0,2">
+            <Button IsEnabled="False" Name="ProfileButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="35" Click="ProfileButton_CLick" BorderBrush="#00000000" Margin="750,2,0,2">
 
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\icons8-user-48.png"/>
+                    <ImageBrush  ImageSource="C:\Users\Admin\source\repos\Umico\Umico\icons8-user-48.png"/>
                 </Button.Background>
-                <Button.Foreground>
-                    <ImageBrush Stretch="Uniform" TileMode="None"/>
-                </Button.Foreground>
+                
             </Button>
 
         </Grid>
         <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="381*"/>
+                <ColumnDefinition Width="19*"/>
+            </Grid.ColumnDefinitions>
 
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -33,8 +35,8 @@
                     <GradientStop Color="#FF7D62E3" Offset="0.632"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Image Source="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\UmicoLogoMain.jpg" Margin="300,65,334,166"/>
-            <Label Content="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Image Source="C:\Users\Admin\source\repos\Umico\Umico\UmicoLogoMain.jpg" Margin="300,65,296,166"/>
+            <Label Content="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" RenderTransformOrigin="0.5,0.5" Margin="310,0,0,0">
 
             </Label>
             <Button Content="Continue as Admin" HorizontalAlignment="Left" Height="39" Margin="206,256,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="AdminEnter_CLick">
@@ -51,7 +53,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Frame Name="MainFrame" Navigated="MainFrame_Navigated"></Frame>
+            <Frame NavigationUIVisibility = "Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Grid.ColumnSpan="2"></Frame>
         </Grid>
     </Grid>
 </Window>

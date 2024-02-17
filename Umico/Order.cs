@@ -10,7 +10,7 @@ namespace Umico
     {
         public int Id { get; set; }
         public string Name{ get; set; }
-        public List<Product> Products { get; set; } = new List<Product>();
+        public Product ProductItem { get; set; } 
         public Status Status { get; set; } = new Status();
          public PickUpPoint PickUpPoint { get; set; }= new PickUpPoint();
         public Customer Customer { get; set; } = new Customer();

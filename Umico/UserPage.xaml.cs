@@ -57,9 +57,8 @@ namespace Umico
           
             Button button = (Button)sender;
             Product selectedProduct = (Product)button.DataContext;
-            int totalamount=Convert.ToInt32(total.Text);
-            totalamount += selectedProduct.Price;
-            total.Text = totalamount.ToString();
+            
+            
             AddToCart(selectedProduct);
         }
 
@@ -72,16 +71,19 @@ namespace Umico
             using (var db = new AppContext()) {
                 db.Orders.ToList();
                 db.Products.ToList();
-                var product=db.Products.Where
-                (p=>p.Name==Product.Name).FirstOrDefault();
-                List<Product> products = new List<Product>();products.Add(product);
-                Order order1 = new Order() { Name = orderName, Customer = CurrentUser.CurrentCustomer, Products = products,
-                    Status = db.Statuses.First(x => x.Name == "Order is being processed"),
-                    PickUpPoint = db.PickUpPoints?.Where(p => p.Location == PickUpBox.SelectedValue).FirstOrDefault()
-            };
-               
-                
-                
+                var product=db.Products.Where(p=>p.Name==Product.Content).FirstOrDefault();
+
+                Order order1 = new Order()
+                {
+                    Name = orderName,
+                    Customer = db.Customers.FirstOrDefault(x => x.Equals(CurrentUser.CurrentCustomer)),
+                    ProductItem = db.Products.FirstOrDefault(p => p.Equals(product)),
+                    Status = db.Statuses.FirstOrDefault(x => x.Name == "Order is being processed"),
+                    PickUpPoint = db.PickUpPoints?.FirstOrDefault(p => p.Location == PickUpBox.SelectedValue)
+                };
+
+
+
                 db.Orders.Add(order1);
                 db.SaveChanges();
             }
@@ -112,7 +114,7 @@ namespace Umico
         private void Discard_Click(object sender, RoutedEventArgs e)
         {
             Product.Content = "";
-            total.Text = "0";
+            PickUpBox.SelectedItem = null;
         }
         
         private void Login_CLick(object sender, RoutedEventArgs e)

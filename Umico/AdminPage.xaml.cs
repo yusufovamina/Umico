@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -46,7 +47,13 @@ namespace Umico
         }
 
         private void SaveEduts_CLick(object sender, RoutedEventArgs e)
-        { }
+        {using(var db=new AppContext())
+            {
+            var order= db.Orders.Where(o=>o.Name==OrdersNames.SelectedValue).First();
+                order.Status = db.Statuses.Where(s=>s.Name== StatusBox.SelectedValue).First();
+                db.SaveChanges();
+            }
+        }
 
             private void AdminLogin_CLick(object sender, RoutedEventArgs e)
         {
@@ -62,28 +69,38 @@ namespace Umico
 
         private void OrdersNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             using (var db = new AppContext()) {
+                List<Status> statuses= db.Statuses.ToList();
+                StatusBox.Items.Clear();
+                foreach(Status st in statuses)
+                {
+                    StatusBox.Items.Add(st.Name);
+                }
+                
                 db.Customers.ToList();
                 db.PickUpPoints.ToList();
                 var c1 = db.Orders.Where(o => o.Name == OrdersNames.SelectedValue.ToString()).ToList();
                 CustomerName.Text = c1[0].Customer.Name;
                 CustomerSurname.Text = c1[0].Customer.Surname;
                 PickUpPoint.Text = c1[0].PickUpPoint.Location;
+                StatusBox.SelectedValue = c1[0].Status.Name;
                 if (c1[0].PickUpPoint.Id % 3 == 0)
                 {
-                    BitmapImage sourse = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot2024-02-16112512.png", UriKind.Relative));
-                    ImagePlace.Source = sourse;
+                    
+                    BitmapImage sourse1 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112512.png"));
+                    ImagePlace.Source = sourse1;
                 }
                 else if (c1[0].PickUpPoint.Id%3 == 1)
                 {
-                    BitmapImage sourse = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot 2024-02-16 112530.png", UriKind.Relative));
-                    ImagePlace.Source = sourse;
+                    BitmapImage sourse2 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112530.png"));
+                    ImagePlace.Source = sourse2;
 
                 }
                 else
                 {
-                    BitmapImage sourse = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot 2024-02-16 112603.png", UriKind.Relative));
-                    ImagePlace.Source = sourse;
+                    BitmapImage sourse3 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112603.png"));
+                    ImagePlace.Source = sourse3;
                 }
             }
         } 
