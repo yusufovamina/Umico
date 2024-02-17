@@ -78,7 +78,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Content="Sign in" HorizontalAlignment="Left" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="UserSignUp_CLick">
+            <Button Content="Sign in" HorizontalAlignment="Left" Click="UserSignUp_CLick" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -87,7 +87,7 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Visibility="Visible" x:Name="SignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
+        <StackPanel Visibility="Hidden" x:Name="SignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,5,0,0" Content="                   Sign Up" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="40"/>
             <TextBox Text="Name" Name="NewName" Margin="50,10,50,0" Height="32" FontSize="22" Width="214"/>
             <TextBox Text="Surname" Name="NewSurname" Margin="50,20,50,0" Height="32" FontSize="22" Width="214"/>

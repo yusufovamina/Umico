@@ -139,6 +139,16 @@ namespace Umico
             private void UserSignUp_CLick(object sender, RoutedEventArgs e)
         {
             LoginOrSignUp.Visibility = Visibility.Hidden;
+            SignUp.Visibility = Visibility.Visible;
+            using (var db = new AppContext())
+            {
+                Customer c1 = new Customer() { Name = NewName.Text, Surname = NewSurname.Text, Age = Convert.ToInt32(Age.Text), Username = NewUsername.Text, Password = NewPassword.Password };
+                db.Customers.Add(c1);
+                db.SaveChanges();
+                MessageBox.Show("Succesfull operation");
+                CurrentUser.CurrentCustomer = c1;
+            }
+            SignUp.Visibility = Visibility.Hidden;
         }
 
     }

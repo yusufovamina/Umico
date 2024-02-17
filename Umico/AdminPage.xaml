@@ -24,8 +24,8 @@
         <Label Content="See order info" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="22"/>
         <ComboBox Name="OrdersNames"  SelectedItem="{Binding SelectedOrderName}" SelectionChanged="OrdersNames_SelectionChanged" Height="25" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,50,0,0"/>
         <TextBox Name="CustomerName" VerticalAlignment="Top" Margin="25,94,0,0"  Height="25" Width="120"  HorizontalAlignment="Left"/>
-        <TextBox Name="CustomerSurname"  HorizontalAlignment="Left" Height="25" Margin="25,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="PickUpPoint" HorizontalAlignment="Left" Height="25" Margin="25,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="CustomerSurname"  HorizontalAlignment="Left" Height="25" Margin="25,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="PickUpPoint" HorizontalAlignment="Left" Height="25" Margin="25,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <ComboBox  Name="StatusBox" HorizontalAlignment="Left" Height="28" Margin="25,248,0,0" VerticalAlignment="Top" Width="177"/>
         <Label  Content="Change order's status" HorizontalAlignment="Left" Height="28" Margin="20,215,0,0" VerticalAlignment="Top" Width="162" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="14"/>
         <Button Margin="34,333,0,0" Click="SaveEduts_CLick" Background="#FFE82861" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontWeight="Bold" Content="Save edits" FontSize="15" Width="87" Height="38">
