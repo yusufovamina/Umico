@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.VisualBasic.Logging;
 
 namespace Umico
 {
@@ -46,8 +48,11 @@ namespace Umico
                 Customer customer7 = new Customer() { Name = "David", Surname = "Abdullayev", Age = 24, Username = "abd_david", Password = "daviddavid" };
 
                 //byte[] imageBytes = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\repos\\Umico\\Umico\\tomatoes.png");
-                byte[] imageBytes2 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\salmon.png");
-                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\spagetti.png");
+                byte[] imageBytes2 = File.ReadAllBytes("C:/Users/Yusuf_hm12/source/repos/Umico/Umico/salmon.png");
+                //byte[] imageBytes2 = File.ReadAllBytes("..\\Umico\\umico - logo.png");
+
+
+                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\spagetti.png");
                 //byte[] imageBytes4 = File.ReadAllBytes("..\\Umico\\ayran.png");
                 //byte[] imageBytes5 = File.ReadAllBytes("..\\Umico\\chocolate.png");
                 //byte[] imageBytes6 = File.ReadAllBytes("..\\Umico\\sprite.png");
@@ -82,13 +87,13 @@ namespace Umico
 
                 Order o1=new Order() { Name="Y45C3X09A2", Customer=customer1, PickUpPoint=pickup1, ProductItem=p3, Status=status1 };
                 
-              //  db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
-                //db.Statuses.AddRange(status1,status2,status3,status4,status5);
-                //db.Products.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13);
-                //db.Customers.AddRange(customer1, customer2, customer3, customer4,customer5,customer6,customer7);
-                //db.Orders.Add(o1);
+             //db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
+               // db.Statuses.AddRange(status1, status2, status3, status4, status5);
+                //db.Products.AddRange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
+               // db.Customers.AddRange(customer1, customer2, customer3, customer4, customer5, customer6, customer7);
+               // db.Orders.Add(o1);
                // db.Products.Add(p1);
-                //db.Products.AddRange( p2, p3);
+               // db.Products.AddRange(p2, p3);
                 db.SaveChanges();
 
             }
@@ -103,7 +108,7 @@ namespace Umico
         private void UserEnter_CLick(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = new UserPage();
-            ProfileButton.IsEnabled = true;
+            ProfileButton.Visibility = Visibility.Visible;
         }
         private void AdminEnter_CLick(object sender, RoutedEventArgs e)
         {

@@ -28,7 +28,7 @@
         <TextBox Name="PickUpPoint" HorizontalAlignment="Left" Height="25" Margin="25,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
         <ComboBox  Name="StatusBox" HorizontalAlignment="Left" Height="28" Margin="25,248,0,0" VerticalAlignment="Top" Width="177"/>
         <Label  Content="Change order's status" HorizontalAlignment="Left" Height="28" Margin="20,215,0,0" VerticalAlignment="Top" Width="162" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="14"/>
-        <Button Margin="34,333,0,0" Click="SaveEduts_CLick" Background="#FFE82861" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontWeight="Bold" Content="Save edits" FontSize="15" Width="87" Height="38">
+        <Button Margin="34,324,0,0" Click="SaveEduts_CLick" Background="#FFE82861" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontWeight="Bold" Content="Save edits" FontSize="15" Width="87" Height="38">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

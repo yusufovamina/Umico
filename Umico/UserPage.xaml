@@ -99,7 +99,7 @@
 
             <PasswordBox   Name="NewPassword" Margin="50,5,50,0" Height="30" FontSize="22" Width="214"/>
 
-            <Button Content="Sign in" HorizontalAlignment="Left" Height="39" Margin="117,20,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="UserSignUp_CLick">
+            <Button Content="Sign in" HorizontalAlignment="Left" Height="39" Margin="117,20,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="SignUp_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="15"/>

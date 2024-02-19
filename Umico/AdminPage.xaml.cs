@@ -47,7 +47,8 @@ namespace Umico
         }
 
         private void SaveEduts_CLick(object sender, RoutedEventArgs e)
-        {using(var db=new AppContext())
+        {
+            using(var db=new AppContext())
             {
             var order= db.Orders.Where(o=>o.Name==OrdersNames.SelectedValue).First();
                 order.Status = db.Statuses.Where(s=>s.Name== StatusBox.SelectedValue).First();
@@ -88,18 +89,18 @@ namespace Umico
                 if (c1[0].PickUpPoint.Id % 3 == 0)
                 {
                     
-                    BitmapImage sourse1 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112512.png"));
+                    BitmapImage sourse1 = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot 2024-02-16 112512.png"));
                     ImagePlace.Source = sourse1;
                 }
                 else if (c1[0].PickUpPoint.Id%3 == 1)
                 {
-                    BitmapImage sourse2 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112530.png"));
+                    BitmapImage sourse2 = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot 2024-02-16 112603.png"));
                     ImagePlace.Source = sourse2;
 
                 }
                 else
                 {
-                    BitmapImage sourse3 = new BitmapImage(new Uri(@"C:\Users\Admin\source\repos\Umico\Umico\Screenshot 2024-02-16 112603.png"));
+                    BitmapImage sourse3 = new BitmapImage(new Uri(@"C:\Users\Yusuf_hm12\source\repos\Umico\Umico\Screenshot 2024-02-16 112603.png"));
                     ImagePlace.Source = sourse3;
                 }
             }

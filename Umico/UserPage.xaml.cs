@@ -119,6 +119,7 @@ namespace Umico
         
         private void Login_CLick(object sender, RoutedEventArgs e)
         {
+            
             using (var db = new AppContext())
             {
                 
@@ -137,9 +138,14 @@ namespace Umico
             }
         }
             private void UserSignUp_CLick(object sender, RoutedEventArgs e)
-        {
+             {
             LoginOrSignUp.Visibility = Visibility.Hidden;
             SignUp.Visibility = Visibility.Visible;
+            
+        }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
             using (var db = new AppContext())
             {
                 Customer c1 = new Customer() { Name = NewName.Text, Surname = NewSurname.Text, Age = Convert.ToInt32(Age.Text), Username = NewUsername.Text, Password = NewPassword.Password };
