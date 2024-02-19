@@ -62,6 +62,27 @@ namespace Umico
             AddToCart(selectedProduct);
         }
 
+        private void PaymentMetodChoice_CLick(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AppContext())
+            {
+                if (Cash.IsChecked == true && Product.Content != null)
+                {
+                     var product = db.Products.Where(p => p.Name == Product.Content).FirstOrDefault();
+                    Amount.Content = product.Price;
+
+                    TotalLbl.Visibility= Visibility.Visible;
+                    Amount.Visibility = Visibility.Visible;
+                
+                }
+                if(Card.IsChecked == true) 
+                {
+                    CardFrame.Content = new Card();
+                }
+            
+            }
+        }
+
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             string orderName = GenerateRandomString(10);

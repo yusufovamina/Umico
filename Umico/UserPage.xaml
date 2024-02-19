@@ -6,11 +6,16 @@
       xmlns:local="clr-namespace:Umico"
       mc:Ignorable="d" 
       d:DesignHeight="410" d:DesignWidth="800"
-      Title="UserPage">
+      Title="UserPage"
+      
+      >
+
 
     <Grid Background="AliceBlue">
 
-        <Label Content="Choose Pick-Up Point" HorizontalAlignment="Left" Height="24" Margin="494,195,0,0" VerticalAlignment="Top" Width="137" FontWeight="Bold" FontFamily="Global Sans Serif"/>
+        <Label Content="Choose Pick-Up Point" HorizontalAlignment="Left" Height="24" Margin="386,102,0,0" VerticalAlignment="Top" Width="137" FontWeight="Bold" FontFamily="Global Sans Serif"/>
+        <Label Content="Choose payment method" HorizontalAlignment="Left" Height="24" Margin="386,181,0,0" VerticalAlignment="Top" Width="154" FontWeight="Bold" FontFamily="Global Sans Serif"/>
+
 
         <ListView  x:Name="productListView" Width="370" Margin="0,0,430,0">
             <ListView.View>
@@ -38,7 +43,7 @@
             </ListView.View>
         </ListView>
 
-        <Label x:Name="Product" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="497,97,0,0" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="22" Height="43" Width="151"/>
+        <Label x:Name="Product" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="497,36,0,0" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="22" Height="43" Width="151"/>
 
         <Button Margin="0,320,45,0" Background="#FF7D62E3" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Content="Order" Click="OrderButton_Click" FontSize="18" Width="129" Height="48">
             <Button.Resources>
@@ -55,7 +60,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox x:Name="PickUpBox" HorizontalAlignment="Left" Height="23" Margin="501,233,0,0" VerticalAlignment="Top" Width="124" BorderBrush="White"/>
+        <ComboBox x:Name="PickUpBox" HorizontalAlignment="Left" Height="23" Margin="552,102,0,0" VerticalAlignment="Top" Width="124" BorderBrush="White"/>
         <StackPanel Visibility="Hidden" x:Name="Login" HorizontalAlignment="Left" Height="380" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,20,0,0" Content="            Log in to continue" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
             <TextBox x:Name="Username" Margin="50,50,50,0" Height="50" FontSize="22"/>
@@ -68,9 +73,9 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        <StackPanel Visibility="Visible" x:Name="LoginOrSignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
+        <StackPanel Visibility="Hidden" x:Name="LoginOrSignUp" HorizontalAlignment="Left" Height="370" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,30,0,0" Content="           Log in or Sign Up" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
-            <Image Source="..\Umico\UmicoLogoMain.jpg" Height="100" Width="100"/>
+            <Image Source="/UmicoLogoMain.jpg" Height="100" Width="100"/>
             <Button Content="Log in" HorizontalAlignment="Left" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="UserLogin_CLick">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -107,6 +112,14 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
+        <RadioButton Name="Cash" Click="PaymentMetodChoice_CLick" Content="Cash" GroupName="Payment"   HorizontalAlignment="Left" Margin="572,185,0,0" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="14"/>
+        <RadioButton Name="Card" Click="PaymentMetodChoice_CLick" Content="Card" GroupName="Payment"   HorizontalAlignment="Left" Margin="648,185,0,0" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="14"/>
+        <Label Visibility="Hidden"  Name="TotalLbl" Margin="443,279,215,0" Content="Total amount:" Foreground="Black" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontSize="18"/>
+        <Label Visibility="Hidden"  Name="Amount" Margin="590,279,162,0" Content="" Foreground="Black" FontWeight="Bold" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontSize="18"/>
+
+            <Frame Name="CardFrame" Height="300" Width="400"/>
+        
 
     </Grid>
+
 </Page>

@@ -26,9 +26,9 @@
 
         <TextBlock Background="AliceBlue" VerticalAlignment='Top' Margin="616,146,28,0" x:Name ="namelbl"
             Text="{Binding Text, ElementName=Name, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="34"/>
-        <TextBlock Background="AliceBlue" VerticalAlignment='Top' Margin="616,205,28,0" x:Name ="surnamelbl"
+        <TextBlock Background="AliceBlue" VerticalAlignment='Top' Margin="616,198,28,0" x:Name ="surnamelbl"
              Text="{Binding Text, ElementName=Surname, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="30"/>
-        <TextBlock  Background="AliceBlue" VerticalAlignment='Top' Margin="616,269,28,0" x:Name ="agelbl"
+        <TextBlock  Background="AliceBlue" VerticalAlignment='Top' Margin="616,247,28,0" x:Name ="agelbl"
              Text="{Binding Value, ElementName=Age, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="25"/>
 
         <Label Content="Your orders:" HorizontalAlignment="Left" Margin="25,80,0,298" FontFamily="Global Sans Serif" FontSize="18" FontWeight="Bold"/>
