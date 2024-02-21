@@ -25,6 +25,7 @@ namespace Umico
         {
             InitializeComponent();
             LoadProducts();
+            
         }
         private void UserLogin_CLick(object sender, RoutedEventArgs e)
         {

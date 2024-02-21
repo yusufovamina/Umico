@@ -19,7 +19,7 @@
         </Grid.Background>
         <Ellipse Name="UserAvatar" Height="100" Width="100" Margin="648,24,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\profile-user.png"  />
+                <ImageBrush ImageSource="/icons8-user-avatar-96.png"  />
 
             </Ellipse.Fill>
         </Ellipse>

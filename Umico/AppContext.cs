@@ -14,6 +14,8 @@ namespace Umico
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<PickUpPoint> PickUpPoints { get; set; } = null!;
         public DbSet<Status> Statuses { get; set; } = null!;
+        public DbSet<CardClass> Cards { get; set; } = null!;
+
 
         public AppContext()
         {

@@ -16,5 +16,6 @@ namespace Umico
         public string Password { get; set; }
         public int Age { get; set; }
         public virtual List<Order> Orders { get; set; } = new List<Order>();
+        public CardClass Card { get; set; }
     }
 }

@@ -11,12 +11,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#FF25416F">
-            <Image Source="/umico-logo.png" Margin="5,8,752,7"></Image>
+            <Image Source="/umico-logo.png" Margin="5,8,752,7">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="/umico-logo.png"/>
+                </Image.OpacityMask>
+            </Image>
             <Label Content="Umico" VerticalAlignment="Top" Margin="50,3,0,0" FontSize="22" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White"/>
             <Button Visibility="Hidden" IsEnabled="True" Name="ProfileButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="35" Click="ProfileButton_CLick" BorderBrush="#00000000" Margin="750,2,0,2">
 
                 <Button.Background>
-                    <ImageBrush  ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\icons8-user-48.png"/>
+                    <ImageBrush  ImageSource="/icons8-user-48.png"/>
                 </Button.Background>
 
             </Button>
@@ -36,7 +40,11 @@
                     <GradientStop Color="#FF7D62E3" Offset="0.632"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Image Source="/UmicoLogoMain.jpg" Margin="270,65,285,154" Grid.Column="1"/>
+            <Image Source="/UmicoLogoMain.jpg" Margin="270,65,285,154" Grid.Column="1">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="/UmicoLogoMain.jpg"/>
+                </Image.OpacityMask>
+            </Image>
             <Label Content="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" RenderTransformOrigin="0.5,0.5" Margin="265,0,0,0" Grid.Column="1">
 
             </Label>
@@ -54,7 +62,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Frame NavigationUIVisibility = "Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Grid.ColumnSpan="3"></Frame>
+           <Frame NavigationUIVisibility = "Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Grid.ColumnSpan="3"></Frame>
         </Grid>
     </Grid>
 </Window>

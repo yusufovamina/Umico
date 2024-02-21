@@ -60,7 +60,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox x:Name="PickUpBox" HorizontalAlignment="Left" Height="23" Margin="552,102,0,0" VerticalAlignment="Top" Width="124" BorderBrush="White"/>
+        <ComboBox x:Name="PickUpBox" HorizontalAlignment="Left" Height="23" Margin="552,102,0,0" VerticalAlignment="Top" Width="152" BorderBrush="White"/>
         <StackPanel Visibility="Hidden" x:Name="Login" HorizontalAlignment="Left" Height="380" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,20,0,0" Content="            Log in to continue" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
             <TextBox x:Name="Username" Margin="50,50,50,0" Height="50" FontSize="22"/>
