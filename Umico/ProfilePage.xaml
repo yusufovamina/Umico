@@ -42,11 +42,12 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\arrow.png"/>
+                <ImageBrush ImageSource="/arrow.png"/>
             </Button.Background>
             <Button.Foreground>
-                <ImageBrush ImageSource="C:\Users\Yusuf_hm12\source\repos\Umico\Umico\arrow.png"/>
-            </Button.Foreground>
+                <ImageBrush>
+                    
+                </ImageBrush>  </Button.Foreground>
         </Button>
 
     </Grid>

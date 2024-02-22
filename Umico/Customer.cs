@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +19,8 @@ namespace Umico
         public string Password { get; set; }
         public int Age { get; set; }
         public virtual List<Order> Orders { get; set; } = new List<Order>();
-        public CardClass Card { get; set; }
+      
+        public  CardClass Card { get; set; }
+
     }
 }

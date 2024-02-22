@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="arrow.png" />
+    <None Remove="Card1.png" />
+    <None Remove="cardPhoto.png" />
+    <None Remove="icons8-cancel-48.png" />
     <None Remove="icons8-user-48.png" />
     <None Remove="icons8-user-avatar-96.png" />
     <None Remove="umico-logo.png" />
@@ -23,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="arrow.png" />
+    <Resource Include="Card1.png" />
+    <Resource Include="cardPhoto.png" />
+    <Resource Include="icons8-cancel-48.png" />
     <Resource Include="icons8-user-48.png" />
     <Resource Include="icons8-user-avatar-96.png" />
     <Resource Include="umico-logo.png" />

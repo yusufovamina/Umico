@@ -92,6 +92,7 @@ namespace Umico
            
             using (var db = new AppContext()) {
                 db.Orders.ToList();
+                db.Cards.ToList();
                 db.Products.ToList();
                 var product=db.Products.Where(p=>p.Name==Product.Content).FirstOrDefault();
 
@@ -104,8 +105,9 @@ namespace Umico
                     PickUpPoint = db.PickUpPoints?.FirstOrDefault(p => p.Location == PickUpBox.SelectedValue)
                 };
 
-
-
+                CurrentUser.CurrentCustomer.Card.Balance = CurrentUser.CurrentCustomer.Card.Balance - (float)product.Price;
+                var card = db.Cards.Where(c => c == CurrentUser.CurrentCustomer.Card).FirstOrDefault();
+                card.Balance = card.Balance - (float)product.Price;
                 db.Orders.Add(order1);
                 db.SaveChanges();
             }
@@ -137,6 +139,8 @@ namespace Umico
         {
             Product.Content = "";
             PickUpBox.SelectedItem = null;
+            Cash.IsChecked = false;
+            Card.IsChecked = false;
         }
         
         private void Login_CLick(object sender, RoutedEventArgs e)

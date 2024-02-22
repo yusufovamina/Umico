@@ -10,14 +10,14 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/cardPhoto.png"/>
+            <ImageBrush ImageSource="/Card1.png"/>
         </Grid.Background>
         <Label Content="Fill the fields" Foreground="White" FontFamily="Global Sans Serif" FontWeight="Bold" FontSize="18" Margin="138,34,138,233"/>
-        <TextBox Height="22" TextWrapping="Wrap" Text="" Margin="92,212,200,66" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
+        <TextBox Name="CVVbox" Height="22" TextWrapping="Wrap" Text="" Margin="92,212,200,66" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
 
-        <TextBox Height="22" TextWrapping="Wrap" Text="" Margin="92,172,92,106" Width="216" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
-        <TextBox Height="22" TextWrapping="Wrap" Text="" Margin="252,212,120,66" Width="28" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
-        <TextBox Height="22" TextWrapping="Wrap" Text="" Margin="290,212,82,66" Width="28" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
+        <TextBox Name="CardNumbBox" Height="22" TextWrapping="Wrap" Text="" Margin="92,172,92,106" Width="216" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
+        <TextBox Name="MMbox" Height="22" TextWrapping="Wrap" Text="" Margin="252,212,120,66" Width="28" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
+        <TextBox Name="YYbox" Height="22" TextWrapping="Wrap" Text="" Margin="290,212,82,66" Width="28" Background="#FF2552A1" FontFamily="Global Sans Serif" FontSize="14" FontWeight="Bold" Foreground="White"/>
 
         <Button Margin="290,260,0,0" Background="#FFE82861" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Content="Add card" Click="AddCard_Click" FontSize="14" Width="100" Height="30">
             <Button.Resources>
@@ -31,7 +31,7 @@
                 <ImageBrush ImageSource="/icons8-cancel-48.png"/>
             </Button.Background>
             <Button.Foreground>
-                <ImageBrush ImageSource="/icons8-cancel-48.png"/>
+                <ImageBrush ImageSource="/icons8-user-avatar-96.png"/>
             </Button.Foreground>
         </Button>
 

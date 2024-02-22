@@ -31,6 +31,20 @@ namespace Umico
         }
         private void AddCard_Click(object sender, RoutedEventArgs e)
         {
+            using(AppContext db=new AppContext()){
+
+                var card = db.Cards.Where(x=>x.Number==CardNumbBox.Text && x.CVV==Convert.ToInt32(CVVbox.Text) && x.YY== Convert.ToInt32(YYbox.Text) && x.MM== Convert.ToInt32(MMbox.Text)).FirstOrDefault();
+            if( card != null)
+                {
+                    MessageBox.Show("Card was added!");
+                    CurrentUser.CurrentCustomer.Card = card;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong values");
+                }
+            }
         }
     }
 }

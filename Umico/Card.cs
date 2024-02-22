@@ -10,9 +10,11 @@ namespace Umico
     {
         public int Id { get; set; }
         public string Number { get; set; }
+        public float Balance { get; set; }
         public int CVV { get; set; }
         public int MM { get; set; }
         public int YY { get; set; }
-        
+        public int? CustomerId { get; set; }
+        public Customer Customer { get; set; }
     }
 }
