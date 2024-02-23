@@ -31,8 +31,8 @@
         <TextBlock  Background="AliceBlue" VerticalAlignment='Top' Margin="616,247,28,0" x:Name ="agelbl"
              Text="{Binding Value, ElementName=Age, UpdateSourceTrigger=PropertyChanged}" FontFamily="Global Sans Serif" FontSize="20" Height="25"/>
 
-        <Label Content="Your orders:" HorizontalAlignment="Left" Margin="25,80,0,298" FontFamily="Global Sans Serif" FontSize="18" FontWeight="Bold"/>
-        <DataGrid Name="OrdersGrid" ItemsSource="{Binding UserOrders}" HorizontalAlignment="Left" VerticalAlignment="Bottom" AutoGenerateColumns="False" Height="202" Margin="25,0,0,48" Width="503" >
+        <Label Content="Your orders:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,94,0,0" FontFamily="Global Sans Serif" FontSize="18" FontWeight="Bold"/>
+        <DataGrid Name="OrdersGrid" ItemsSource="{Binding UserOrders}" HorizontalAlignment="Left" VerticalAlignment="Bottom" AutoGenerateColumns="False" Height="202" Margin="25,0,0,48" Width="506" >
        
             </DataGrid>
             <Button  Click="Back_CLick" HorizontalAlignment="Left" Height="35"  Margin="14,12,0,0" VerticalAlignment="Top" Width="35" FontWeight="Bold" FontSize="14" BorderBrush="#00000000">

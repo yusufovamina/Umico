@@ -141,6 +141,7 @@ namespace Umico
             PickUpBox.SelectedItem = null;
             Cash.IsChecked = false;
             Card.IsChecked = false;
+
             TotalLbl.Visibility = Visibility.Hidden;
             Amount.Content = 0;
             Amount.Visibility = Visibility.Hidden;
