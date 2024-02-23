@@ -47,30 +47,41 @@ namespace Umico
                 Customer customer6 = new Customer() { Name = "Zaur", Surname = "Tagizade", Age = 24, Username = "zaur01", Password = "24242424" };
                 Customer customer7 = new Customer() { Name = "David", Surname = "Abdullayev", Age = 24, Username = "abd_david", Password = "daviddavid" };
 
-                //byte[] imageBytes = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\repos\\Umico\\Umico\\tomatoes.png");
-                byte[] imageBytes2 = File.ReadAllBytes("C:/Users/Admin/source/repos/Umico/Umico/images/salmon.png");
-                //byte[] imageBytes2 = File.ReadAllBytes("..\\Umico\\umico - logo.png");
+                byte[] imageBytes = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\tomatoes.png");
+                byte[] imageBytes2 = File.ReadAllBytes("C:/Users/Yusuf_hm12/source/repos/Umico/Umico/images/salmon.png");
 
 
-                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Admin\\source\\repos\\Umico\\Umico\\images\\spagetti.png");
-                //byte[] imageBytes4 = File.ReadAllBytes("..\\Umico\\ayran.png");
-                //byte[] imageBytes5 = File.ReadAllBytes("..\\Umico\\chocolate.png");
-                //byte[] imageBytes6 = File.ReadAllBytes("..\\Umico\\sprite.png");
-                //byte[] imageBytes7 = File.ReadAllBytes("..\\Umico\\bread.png");
+                byte[] imageBytes3 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\spagetti.png");
+                byte[] imageBytes4 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\ayran.png");
+                byte[] imageBytes5 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\chocolate.png");
+                byte[] imageBytes6 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\sprite.png");
+                byte[] imageBytes7 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\source\\repos\\Umico\\Umico\\images\\bread.png");
 
-               // Product p1 = new Product() { Name = "Tomato", Price = 3 };
-                Product p2 = new Product() { Name = "Salmon", Price = 15, Image=imageBytes2 };
-                Product p3 = new Product() { Name = "Spagetti", Price = 3, Image= imageBytes3 };
-                //Product p4 = new Product() { Name = "Ayran", Price = 2};
-                //Product p5 = new Product() { Name = "Chocolate", Price = 1};
-                //Product p6 = new Product() { Name = "Sprite", Price = 1 };
-                //Product p7 = new Product() { Name = "Bread", Price = 1 };
-                //Product p8 = new Product() { Name = "Chicken", Price = 6 };
-                //Product p9 = new Product() { Name = "Pineapple", Price = 4 };
-                //Product p10 = new Product() { Name = "Orange juice", Price = 3 };
-                //Product p11 = new Product() { Name = "Snickers cake", Price = 9 };
-                //Product p12 = new Product() { Name = "Butter", Price = 12 };
-                //Product p13 = new Product() { Name = "Carrot", Price = 5 };
+                byte[] imageBytes8 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\chiken.png");
+                byte[] imageBytes9 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\pineapple.png");
+
+                byte[] imageBytes10 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\Orange-juice.png");
+
+                byte[] imageBytes11 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\cake.png");
+
+                byte[] imageBytes12 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\butter.png");
+                byte[] imageBytes13 = File.ReadAllBytes("C:\\Users\\Yusuf_hm12\\Source\\Repos\\Umico1\\Umico\\images\\carrot.png");
+
+
+
+                Product p1 = new Product() { Name = "Tomato", Price = 3, Image = imageBytes };
+                Product p2 = new Product() { Name = "Salmon", Price = 15, Image = imageBytes2 };
+                Product p3 = new Product() { Name = "Spagetti", Price = 3, Image = imageBytes3 };
+                Product p4 = new Product() { Name = "Ayran", Price = 2, Image = imageBytes4 };
+                Product p5 = new Product() { Name = "Chocolate", Price = 1, Image = imageBytes5 };
+                Product p6 = new Product() { Name = "Sprite", Price = 1, Image = imageBytes6 };
+                Product p7 = new Product() { Name = "Bread", Price = 1, Image = imageBytes7 };
+                Product p8 = new Product() { Name = "Chicken", Price = 6, Image = imageBytes8 };
+                Product p9 = new Product() { Name = "Pineapple", Price = 4, Image = imageBytes9 };
+                Product p10 = new Product() { Name = "Orange juice", Price = 3, Image = imageBytes10 };
+                Product p11 = new Product() { Name = "Snickers cake", Price = 9, Image = imageBytes11 };
+                Product p12 = new Product() { Name = "Butter", Price = 12, Image = imageBytes12 };
+                Product p13 = new Product() { Name = "Carrot", Price = 5, Image = imageBytes13 };
 
 
                 Status status1 = new Status() { Name = "Order is being processed" };
@@ -89,7 +100,7 @@ namespace Umico
 
                 CardClass c1 = new CardClass() {  Number="1111111111111111", CVV=123,MM=10, YY=2028 , Balance=569.5f};
 
-                //db.Products.AddRange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
+                db.Products.AddRange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
                 // db.Products.Add(p1);
                 //db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
                 //db.Statuses.AddRange(status1, status2, status3, status4, status5);
