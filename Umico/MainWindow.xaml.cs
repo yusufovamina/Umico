@@ -100,7 +100,7 @@ namespace Umico
 
                 CardClass c1 = new CardClass() {  Number="1111111111111111", CVV=123,MM=10, YY=2028 , Balance=569.5f};
 
-                db.Products.AddRange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
+                //db.Products.AddRange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
                 // db.Products.Add(p1);
                 //db.PickUpPoints.AddRange(pickup1, pickup2, pickup3, pickup4);
                 //db.Statuses.AddRange(status1, status2, status3, status4, status5);

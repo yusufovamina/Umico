@@ -11,8 +11,8 @@
     <Grid Background="AliceBlue">
         <StackPanel Visibility="Visible" Name="Login" HorizontalAlignment="Left" Height="440" Margin="207,0,0,0" VerticalAlignment="Center" Width="358" Background="#FF7D62E3">
             <Label Margin="0,50,0,0" Content="   Log in to continue as Admin" Foreground="#FFFCFAFA" FontWeight="Bold" FontFamily="Global Sans Serif" FontSize="23" Height="56"/>
-            <TextBox Name="Username" Margin="50,100,50,0" Height="50"/>
-            <PasswordBox Name="Password" Margin="50,40,50,0" Height="50"></PasswordBox>
+            <TextBox Name="Username" Margin="50,50,50,0" Height="50" FontSize="18"/>
+            <PasswordBox Name="Password" Margin="50,40,50,0" Height="50" FontSize="18"></PasswordBox>
             <Button Content="Log in" HorizontalAlignment="Left" Height="39" Margin="117,30,0,0" VerticalAlignment="Top" Width="137" Background="#FF25416F" FontWeight="Bold" FontSize="14" Foreground="White" Click="AdminLogin_CLick">
                 <Button.Resources>
                     <Style TargetType="Border">
